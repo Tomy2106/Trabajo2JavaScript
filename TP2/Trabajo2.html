@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabajo Practico 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+<header class="container-fluid header" >
+
+  <div class="row" >
+    <nav class="navbar navbar-expand-lg navbar-dark " style="padding: 5px 50px;background-color: rgb(52, 57, 63);"> 
+
+        <div class="container-fluid" >
+            <a class="navbar-brand" href="#">
+              Conf Bs As
+            </a>
+          
+
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">La conferencia</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">El lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Conviértete en orador</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link active text-sucess" aria-current="page" style="color: rgb(93, 214, 93);" href="#">Comprar tickets</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </div>
+</header>
+
+<section>
+    
+
+    <div class="row row-cols-md-3 g-2  " style=" margin-top: 15px; margin-left: 375px; width: 800px; text-align: center; display: flex; justify-content: center;">
+        <div class="col">
+          <div class="card h-200" style="border-color: rgb(0, 132, 255)">
+            <div class="card-header" style="color: white; background-color: rgb(0, 132, 255); font-size: 200%;">Estudiante</div>
+            <div class="card-body">
+              
+              <p class="card-text">Tienen un descuento</p>
+              <h4 class="card-text">80%</h4>
+              <p class="card-text" style="color: rgb(208, 205, 205);">*Presentar documentación</p>
+
+            </div>
+          
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-200" style="border-color: rgb(0, 255, 247)">
+            <div class="card-header" style="color: white; background-color: rgb(0, 255, 247); font-size: 200%;">Trainee</div>
+            <div class="card-body">
+              
+              <p class="card-text">Tienen un descuento</p>
+              <h4 class="card-text">50%</h4>
+              <p class="card-text" style="color: rgb(208, 205, 205);">*Presentar documentación</p>
+
+            </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-200" style="border-color: rgb(255, 247, 0)">
+            <div class="card-header" style="color: white; background-color: rgb(255, 247, 0); font-size: 200%;">Junior</div>
+            <div class="card-body">
+              
+              <p class="card-text">Tienen un descuento</p>
+              <h4 class="card-text">15%</h4>
+              <p class="card-text" style="color: rgb(208, 205, 205);">*Presentar documentación</p>
+
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 150%; display: flex; justify-content: center;">Venta</p>
+      <h2 style="display: flex; justify-content: center;" >VALOR DE TICKET $200</h2>
+
+      <div class="row g-3" style="display: flex; justify-content: center;">
+
+        <div class="col-md-3" style="width: 25%;">
+          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+        </div>
+        <div class="col-md-3"style="width: 27%;">
+          <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+        </div>
+        <div class="col-6" style="width: 52%;">
+          <input type="text" class="form-control" placeholder="Correo" aria-label="Correo">
+        </div>
+
+        <div class="row g-2" style="display: flex; justify-content: center;">
+
+          <div class="col-md-3" style="width: 27%;">
+          <label class="form-label">Cantidad</label>
+          <input type="text" class="form-control" id="cantidad" placeholder="cantidad">
+          </div>
+
+          <div class="col-md-3" style="width: 25%;">
+          <label class="form-label">Categoria</label>
+          <select id="categoriaSelect" class="form-select">
+            <option value="">--Seleccione--</option>
+            <option value="0">Sin Categoria</option>
+            <option value="1">Estudiante</option>
+            <option value="2">Trainee </option>
+            <option value="3">Junior </option>
+          </select>
+          </div>
+
+        </div>
+      </div>
+      <div class="alert alert-info col-md-6" style="margin: 0px auto; margin-top: 30px; width: 52%; " id="total">
+       Total a Pagar: $
+      </div>
+      <div class="button" style=" margin-top: 20px; margin-left: 367px; ">
+      <button type="button" class="btn " style="background-color: rgb(96, 230, 24); color: white; width: 34%; " id="reset" >Borrar</button> <button type="button" class="btn" style="background-color: rgb(96, 230, 24); color: white; width: 34%; "  id="Calcular">Resumen</button>
+    </div>
+  </section>
+
+    <footer> 
+      <ul class="nav justify-content-center" style="background-color: rgb(28, 62, 83); height: 80px; margin-top: 20px;">
+        <li class="nav-item " style="margin-top: 20px;" >
+          <a class="nav-link active" aria-current="page" href="#" style="color: white;">Preguntas frecuentes</a>
+        </li>
+        <li class="nav-item" style="margin-top: 20px;">
+          <a class="nav-link" href="#"style="color: white;">Contáctanos</a>
+        </li>
+        <li class="nav-item" style="margin-top: 20px;">
+          <a class="nav-link" href="#"style="color: white;">Prensa</a>
+        </li>
+        <li class="nav-item"style="margin-top: 20px;">
+          <a class="nav-link"href="#"style="color: white;">Conferencias</a>
+        </li>
+        <li class="nav-item"style="margin-top: 20px;">
+          <a class="nav-link"href="#"style="color: white;">Términos y condiciones</a>
+        </li>
+        <li class="nav-item"style="margin-top: 20px;">
+          <a class="nav-link"href="#"style="color: white;">Privacidad</a>
+        </li>
+        <li class="nav-item"style="margin-top: 20px;">
+          <a class="nav-link"href="#"style="color: white;">Estudiantes</a>
+        </li>
+      </ul>
+    
+    
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="javascript.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
